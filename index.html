@@ -20,34 +20,34 @@
     <!-- Main section Start -->
     <main>
         <section class="container">
-            <div class="row">
+            <div class="row g-5">
                 <!-- image -->
                 <div class="col-lg-7">
-                    <img height="815px" width="705px" src="images/Budgeting.jpg" alt="">
+                    <img height="815px" width="100%" src="images/Budgeting.jpg" alt="">
                 </div>
                 <!-- Balance Sheet -->
-                <div class="col-lg-5 col-12 balance-statement">
+                <div  height="815px" class="col-lg-5 balance-statement">
                     <div class="Income container">
-                        <h2 class="text-center my-4 text-success">Income</h2>
+                        <h3 class="text-center my-4 text-success">Income</h3>
                         <h4>Income :<input type="text" value="" name="" id="income-input" class="ms-3 input border-0 rounded"></h4>
                     </div>
                     <div>
-                        <h2 class="text-center my-4 text-danger">Expenses</h2>
+                        <h3 class="text-center my-4 text-danger">Expenses</h3>
                         <div class="Expenses container">
                             <h4 class="ms-4">Food :<input type="text" name="" id="food-input" class="ms-3 input border-0 rounded"></h4>    
                             <h4 class="ms-4 my-3">Rent :<input type="text" name="" id="rent-input" class="ms-4 input border-0 rounded"></h4>    
                             <h4 class="ms-2 my-3">Clothes :<input type="text" name="" id="clothes-input" class="ms-2 input border-0 rounded"><h4>                            
                             <div class="d-grid gap-2 col-4 mx-auto my-5">
-                                <button class="btn btn-primary fw-bold" type="button" id="calculate-btn">Calculate</button>                                
+                                <button class="btn btn-primary fw-bold px-5" type="button" id="calculate-btn">Calculate</button>                                
                             </div>
                             <div class="mt-4">
-                                <h2 class="m-3">Total Expenses : <span id="expenses-field"></span></h2>
-                                <h2 class="m-3">Balance : <span id="balance-field"></span></h2>
+                                <h4 class="m-3">Total Expenses : <span id="expenses-field"></span></h4>
+                                <h4 class="m-3">Balance : <span id="balance-field"></span></h4>
                             </div>
-                            <h4 class="my-5 text-center">Save :<input type="number" name="" id="savings-percentage" class="mx-4 input border-0 rounded w-25"> % <button type="button" class="btn btn-primary ms-3 px-5" id="save-btn">Save</button></h4>
+                            <h4 class="my-5 text-center">Save :<input type="number" name="" id="savings-percentage" class="ms-2 input border-0 rounded w-25"> % <button type="button" class="btn btn-primary ms-3 px-4" id="save-btn">Save</button></h4>
                             <div>
-                                <h2 class="m-3">Savings Amount : <span id="savings-amount"></span></h2>
-                                <h2 class="m-3">Remaining Balance : <span id="remaining-balance"></span></h2>
+                                <h4 class="m-3">Savings Amount : <span id="savings-amount"></span></h4>
+                                <h4 class="m-3">Remaining Balance : <span id="remaining-balance"></span></h4>
                             </div>                            
                         </div>
                     </div>
