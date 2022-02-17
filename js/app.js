@@ -1,7 +1,9 @@
+// function to get the total income
 function getIncomeTotal () {
     const incomeInput = document.getElementById ('income-input');
     const incomeTotal = parseFloat (incomeInput.value);
     
+    // error handling
     if (incomeTotal > 0 || incomeTotal == 'number') {
         return incomeTotal;
     }
@@ -9,10 +11,9 @@ function getIncomeTotal () {
         return alert ('please enter');
         
     }
-    
-    // return incomeTotal;
 }
 
+// function to get the total expenses
 function getExpensesTotal () {
     const foodInput = document.getElementById ('food-input');
     const foodTotal = parseFloat (foodInput.value);
@@ -21,18 +22,20 @@ function getExpensesTotal () {
     const clothesInput = document.getElementById ('clothes-input');
     const clothesTotal = parseFloat (clothesInput.value);
     
+    // total expenses
     const expensesTotal = foodTotal + rentTotal + clothesTotal;
-    return expensesTotal;  
-   
+    return expensesTotal;     
         
 }
 
+// handeling calculate button
 document.getElementById ('calculate-btn').addEventListener ('click', function (){
     
     
     const expensesField = document.getElementById ('expenses-field');
     expensesField.innerText = getExpensesTotal ();
 
+    // balance total
     const balanceField = document.getElementById ('balance-field');
     const balanceTotal = getIncomeTotal () - getExpensesTotal ();
     balanceField.innerText = balanceTotal;
@@ -44,23 +47,24 @@ document.getElementById ("save-btn").addEventListener ('click', function () {
     const savingsPercentageValue = parseFloat(savingsPercentageInput.value);
     const savingsPercentage = savingsPercentageValue / 100;
 
-
+    // savings total
     const savingsAmount = document.getElementById ('savings-amount');
     const savingsTotal = getIncomeTotal () * savingsPercentage;
     savingsAmount.innerText = savingsTotal;   
 
-
+    // balance total
     const balanceField = document.getElementById ('balance-field');
     const balanceTotal = getIncomeTotal () - getExpensesTotal ();
     balanceField.innerText = balanceTotal;
 
+    // error handling
     if (savingsTotal > balanceTotal) { 
         alert ('Insufficient balance for savings');
         savingsAmount.innerText = '';
         remainingBalance = ''   ;
     }
 
-
+    // remaining balance
     const remainingBalance = document.getElementById ('remaining-balance');
     remainingBalance.innerText = balanceTotal - savingsTotal;
 
