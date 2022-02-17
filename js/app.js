@@ -8,7 +8,7 @@ function getIncomeTotal () {
         return incomeTotal;
     }
     else {
-        return alert ('Please enter a valid number!');        
+        alert ('Please enter a valid number!');        
     }
 }
 
@@ -26,7 +26,7 @@ function getExpensesTotal () {
     return expensesTotal;        
 }
 
-// handeling calculate button
+    // handeling calculate button
 document.getElementById ('calculate-btn').addEventListener ('click', function (){    
     const expensesField = document.getElementById ('expenses-field');
     expensesField.innerText = getExpensesTotal ();
@@ -37,7 +37,7 @@ document.getElementById ('calculate-btn').addEventListener ('click', function ()
     balanceField.innerText = balanceTotal;
 
     // error handeling
-    if (getIncomeTotal () < getExpensesTotal ()) {
+    if (getIncomeTotal () < getExpensesTotal () ) {
         alert ('Sorry! You are in debt..');
         balanceField.innerText = '';
     }
